@@ -48,6 +48,10 @@ app.use('/api/health', healthRouter);
 const publicDir = path.join(__dirname, 'public');
 app.use(express.static(publicDir));
 
+// Serve P@P preview hub folder
+const papDir = path.join(__dirname, 'P@P');
+app.use('/P@P', express.static(papDir));
+
 // Fallback SPA routing: send index.html for any client navigation
 app.use((req, res) => {
   // If request asks for an asset or API, don't return HTML

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P@P – InfraSight Preview Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.85);
+      --border: rgba(255, 255, 255, 0.08);
+      --primary: #06b6d4;
+      --primary-hover: #0891b2;
+      --accent: #f97316;
+      --success: #10b981;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(249, 115, 22, 0.1) 0%, transparent 40%);
+    }
+
+    header {
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: rgba(9, 13, 22, 0.7);
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-folder {
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+    }
+
+    .brand h1 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .brand p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #041b24;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      color: #fff;
+    }
+
+    .status-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    main {
+      flex: 1;
+      padding: 20px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 18px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn.active {
+      color: #fff;
+      background: rgba(6, 182, 212, 0.15);
+      border-color: rgba(6, 182, 212, 0.4);
+    }
+
+    .url-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--primary);
+    }
+
+    .preview-container {
+      flex: 1;
+      min-height: 720px;
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 720px;
+      border: none;
+      display: block;
+    }
+
+    .quick-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .info-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .info-card h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-card .val {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .info-card p {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="badge-folder">P@P</div>
+      <div>
+        <h1>InfraSight Preview Hub</h1>
+        <p>Interactive VS Code Workspace & Module Preview</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>Server Port 8000 Active</span>
+      </div>
+      <a href="https://github.com/AadiTheCoder3006/infrasight-indore" target="_blank" class="btn">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub Repo</span>
+      </a>
+      <a href="http://localhost:8000/" target="_blank" class="btn btn-primary">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        <span>Open In Browser</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <div class="nav-tabs">
+        <button class="tab-btn active" onclick="loadFrame('/')">
+          <i class="fa-solid fa-map-location-dot"></i> Citizen Dashboard
+        </button>
+        <button class="tab-btn" onclick="loadFrame('/report')">
+          <i class="fa-solid fa-camera"></i> AI Report Scanner
+        </button>
+        <button class="tab-btn" onclick="loadFrame('/admin/heatmap')">
+          <i class="fa-solid fa-fire"></i> GIS Heatmap
+        </button>
+        <button class="tab-btn" onclick="loadFrame('/admin/verification')">
+          <i class="fa-solid fa-check-double"></i> Repair Verification
+        </button>
+        <button class="tab-btn" onclick="loadFrame('/admin/issues')">
+          <i class="fa-solid fa-table-list"></i> Triage Workspace
+        </button>
+        <button class="tab-btn" onclick="loadFrame('/my-reports')">
+          <i class="fa-solid fa-clock-rotate-left"></i> Track Reports
+        </button>
+      </div>
+
+      <div class="url-bar">
+        <i class="fa-solid fa-lock"></i>
+        <span id="currentUrl">http://localhost:8000/</span>
+      </div>
+    </div>
+
+    <div class="preview-container">
+      <iframe id="previewFrame" src="http://localhost:8000/"></iframe>
+    </div>
+
+    <div class="quick-info-grid">
+      <div class="info-card">
+        <h3><i class="fa-solid fa-microchip" style="color:#06b6d4;"></i> AI Detection</h3>
+        <div class="val">Computer Vision</div>
+        <p>Real-time edge neural inference projecting bounding boxes and severity scoring on uploaded defect photos.</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i class="fa-solid fa-server" style="color:#10b981;"></i> REST API</h3>
+        <div class="val">Node + Express</div>
+        <p>11 REST endpoints powering Indore wards, GIS heatmaps, issue triage, and audit verification.</p>
+      </div>
+
+      <div class="info-card">
+        <h3><i class="fa-solid fa-code" style="color:#f97316;"></i> VS Code Tools</h3>
+        <div class="val">Simple Browser & F5</div>
+        <p>Pre-configured launch.json and tasks.json for seamless live inspection and debugging.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function loadFrame(path) {
+      const frame = document.getElementById('previewFrame');
+      const urlText = document.getElementById('currentUrl');
+      const origin = 'http://localhost:8000';
+      
+      frame.src = origin + path;
+      urlText.textContent = origin + path;
+
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
