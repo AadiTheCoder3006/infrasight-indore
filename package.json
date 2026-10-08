@@ -1,0 +1,26 @@
+{
+  "name": "infrasight-fullstack",
+  "version": "1.0.0",
+  "description": "InfraSight – Indore Infrastructure Monitor Full Stack Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test_api.js"
+  },
+  "keywords": [
+    "infrasight",
+    "indore",
+    "smart-city",
+    "infrastructure-monitor",
+    "full-stack"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "isomorphic-git": "^1.43.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}

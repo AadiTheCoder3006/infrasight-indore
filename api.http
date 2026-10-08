@@ -1,0 +1,68 @@
+### ========================================================
+### InfraSight – Indore Infrastructure Monitor REST API
+### Click "Send Request" above any query to test inside VS Code
+### ========================================================
+
+@baseUrl = http://localhost:8000
+
+### 1. Health Check
+GET {{baseUrl}}/health
+
+### 2. Global Infrastructure Statistics
+GET {{baseUrl}}/stats
+
+### 3. List All Issues
+GET {{baseUrl}}/issues
+
+### 4. Filter Issues by Category & Priority
+GET {{baseUrl}}/issues?type=pothole&min_score=80
+
+### 5. Fetch Single Issue Detail
+GET {{baseUrl}}/issues/IS-0092
+
+### 6. Heatmap Coordinate Clusters
+GET {{baseUrl}}/heatmap
+
+### 7. Filter Heatmap by Hazard Type
+GET {{baseUrl}}/heatmap?type=pothole
+
+### 8. Run AI Computer Vision Photo Scan
+POST {{baseUrl}}/reports/scan
+Content-Type: application/json
+
+{}
+
+### 9. Create New Citizen Hazard Report
+POST {{baseUrl}}/reports
+Content-Type: application/json
+
+{
+  "title": "Severe road cavity outside Scheme 54",
+  "category": "Road & Potholes",
+  "address": "AB Road near Vijay Nagar Square",
+  "area": "Vijay Nagar",
+  "ward": "Ward 34",
+  "description": "Deep asphalt crater causing traffic slowdown",
+  "latitude": 22.7533,
+  "longitude": 75.8937,
+  "citizen_name": "Indore Resident",
+  "citizen_phone": "+91 98260 99887"
+}
+
+### 10. Update Issue Status (Officer Triage)
+PATCH {{baseUrl}}/issues/IS-0092/status
+Content-Type: application/json
+
+{
+  "status": "In Progress",
+  "changed_by": "Chief Zone Engineer"
+}
+
+### 11. Verify Repair & Close Ticket
+POST {{baseUrl}}/issues/IS-0092/verify-repair
+Content-Type: application/json
+
+{
+  "officer": "Quality Control Auditor",
+  "notes": "Verified surface compaction and smooth bitumen finish."
+}

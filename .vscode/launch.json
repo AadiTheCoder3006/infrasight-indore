@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "🚀 Start InfraSight Server",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server.js",
+      "restart": true,
+      "console": "integratedTerminal",
+      "env": {
+        "PORT": "8000"
+      },
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "🌐 Open Preview in Microsoft Edge",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceFolder}/public"
+    },
+    {
+      "name": "🌐 Open Preview in Google Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8000",
+      "webRoot": "${workspaceFolder}/public"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "⭐ Full-Stack: Server + Edge Preview",
+      "configurations": [
+        "🚀 Start InfraSight Server",
+        "🌐 Open Preview in Microsoft Edge"
+      ]
+    }
+  ]
+}

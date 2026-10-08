@@ -1,0 +1,17 @@
+{
+  "livePreview.defaultPort": 8000,
+  "livePreview.autoRefreshPreview": "OnChangesToSavedFiles",
+  "livePreview.openPreviewTarget": "EmbeddedPreview",
+  "portsAttributes": {
+    "8000": {
+      "label": "InfraSight Indore WebApp",
+      "onAutoForward": "openBrowserOnce"
+    }
+  },
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true
+  }
+}

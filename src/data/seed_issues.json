@@ -1,0 +1,428 @@
+[
+  {
+    "id": "IS-0095",
+    "rawId": "IS-0095",
+    "title": "Broken traffic signal, collision risk at intersection",
+    "type": "traffic_signal",
+    "status": "Reported",
+    "priority_score": 96,
+    "area": "Rajwada Chowk",
+    "address": "Rajwada Chowk main intersection, MG Road",
+    "ward": "Ward 42 - Rajwada Central",
+    "report_count": 17,
+    "latitude": 22.7196,
+    "longitude": 75.8577,
+    "image_url": "/traffic_signal.jpg",
+    "created_at": "2026-10-06T08:15:00.000Z",
+    "department": "Traffic & Signals Department",
+    "detections": [
+      {
+        "class": "traffic_signal",
+        "confidence": 0.98,
+        "bbox": [0.32, 0.12, 0.38, 0.58],
+        "label": "Traffic Signal · Malfunction"
+      }
+    ],
+    "connected_hazards": [
+      {
+        "type": "busy_pedestrian_zone",
+        "distance_m": 15,
+        "risk_level": "Critical"
+      }
+    ],
+    "complaints": [
+      {
+        "reference_number": "IMC-2026-11495",
+        "citizen_name": "Sumit Soni",
+        "phone": "+91 98260 41102",
+        "created_at": "2026-10-06T08:15:00.000Z"
+      }
+    ],
+    "timeline": [
+      {
+        "status": "Reported",
+        "time": "2026-10-06T08:15:00.000Z",
+        "by": "Citizen (Mobile App)",
+        "note": "Initial hazard report lodged with photo evidence."
+      },
+      {
+        "status": "Acknowledged",
+        "time": "2026-10-06T08:35:00.000Z",
+        "by": "Traffic Cell AI",
+        "note": "Corroborated across 17 citizen calls. Automated priority elevated to Critical (96)."
+      }
+    ]
+  },
+  {
+    "id": "IS-0092",
+    "rawId": "IS-0092",
+    "title": "Deep pothole, lane collapse risk on main carriageway",
+    "type": "pothole",
+    "status": "In Progress",
+    "priority_score": 92,
+    "area": "Vijay Nagar",
+    "address": "AB Road near Scheme 54, Vijay Nagar",
+    "ward": "Ward 34 - Vijay Nagar North",
+    "report_count": 13,
+    "latitude": 22.7533,
+    "longitude": 75.8937,
+    "image_url": "/pothole.jpg",
+    "created_at": "2026-10-05T09:42:00.000Z",
+    "department": "Roads & Highways Department",
+    "detections": [
+      {
+        "class": "pothole",
+        "confidence": 0.94,
+        "bbox": [0.18, 0.45, 0.64, 0.42],
+        "label": "Pothole · Severe Surface Cavity"
+      }
+    ],
+    "connected_hazards": [
+      {
+        "type": "water_pipeline",
+        "distance_m": 40,
+        "risk_level": "High"
+      }
+    ],
+    "complaints": [
+      {
+        "reference_number": "IMC-2026-11420",
+        "citizen_name": "Ananya Sharma",
+        "phone": "+91 98261 88934",
+        "created_at": "2026-10-05T09:42:00.000Z"
+      }
+    ],
+    "timeline": [
+      {
+        "status": "Reported",
+        "time": "2026-10-05T09:42:00.000Z",
+        "by": "Ananya Sharma",
+        "note": "Reported severe pothole causing two-wheeler skidding."
+      },
+      {
+        "status": "Acknowledged",
+        "time": "2026-10-05T10:15:00.000Z",
+        "by": "Zone 3 Officer",
+        "note": "Consolidated into 13-report cluster. Inspection scheduled."
+      },
+      {
+        "status": "In Progress",
+        "time": "2026-10-05T14:30:00.000Z",
+        "by": "PWD Asphalt Crew #4",
+        "note": "Crews dispatched with cold-mix asphalt patch material."
+      }
+    ]
+  },
+  {
+    "id": "IS-0089",
+    "rawId": "IS-0089",
+    "title": "Pipeline burst & high pressure water flooding roadway",
+    "type": "water_pipeline",
+    "status": "In Progress",
+    "priority_score": 88,
+    "area": "Bhawarkua",
+    "address": "Bhawarkua Square, near DAVV University Road",
+    "ward": "Ward 62 - Bhawarkua South",
+    "report_count": 9,
+    "latitude": 22.6922,
+    "longitude": 75.8672,
+    "image_url": "/pipeline.jpg",
+    "created_at": "2026-10-05T14:30:00.000Z",
+    "department": "Narmada Water Supply Project",
+    "detections": [
+      {
+        "class": "water_pipeline",
+        "confidence": 0.95,
+        "bbox": [0.22, 0.38, 0.58, 0.48],
+        "label": "Pipeline Rupture · Active Flow"
+      }
+    ],
+    "connected_hazards": [
+      {
+        "type": "underground_cables",
+        "distance_m": 12,
+        "risk_level": "Medium"
+      }
+    ],
+    "complaints": [
+      {
+        "reference_number": "IMC-2026-11389",
+        "citizen_name": "Dr. Ramesh Chhabra",
+        "phone": "+91 94250 55122",
+        "created_at": "2026-10-05T14:30:00.000Z"
+      }
+    ],
+    "timeline": [
+      {
+        "status": "Reported",
+        "time": "2026-10-05T14:30:00.000Z",
+        "by": "Citizen Reporter",
+        "note": "Water flooding main carriageway outside university gate."
+      },
+      {
+        "status": "In Progress",
+        "time": "2026-10-05T15:45:00.000Z",
+        "by": "IMC Water Works Division",
+        "note": "Feeder line isolated; excavation team active."
+      }
+    ]
+  },
+  {
+    "id": "IS-0087",
+    "rawId": "IS-0087",
+    "title": "Streetlight cluster dark, accident risk at bend",
+    "type": "broken_streetlight",
+    "status": "Reported",
+    "priority_score": 74,
+    "area": "Palasia",
+    "address": "Palasia Square, AB Road corridor",
+    "ward": "Ward 45 - Old Palasia",
+    "report_count": 5,
+    "latitude": 22.7244,
+    "longitude": 75.8839,
+    "image_url": "/streetlight.jpg",
+    "created_at": "2026-10-04T18:15:00.000Z",
+    "department": "Electrical & Street Lighting",
+    "detections": [
+      {
+        "class": "broken_streetlight",
+        "confidence": 0.92,
+        "bbox": [0.42, 0.08, 0.25, 0.72],
+        "label": "Pole & Luminaire Inoperative"
+      }
+    ],
+    "connected_hazards": [
+      {
+        "type": "unmarked_divider",
+        "distance_m": 8,
+        "risk_level": "High"
+      }
+    ],
+    "complaints": [
+      {
+        "reference_number": "IMC-2026-11340",
+        "citizen_name": "Pooja Trivedi",
+        "phone": "+91 97555 12890",
+        "created_at": "2026-10-04T18:15:00.000Z"
+      }
+    ],
+    "timeline": [
+      {
+        "status": "Reported",
+        "time": "2026-10-04T18:15:00.000Z",
+        "by": "Citizen App",
+        "note": "Four consecutive poles non-functional on arterial road."
+      }
+    ]
+  },
+  {
+    "id": "IS-0079",
+    "rawId": "IS-0079",
+    "title": "Overflowing secondary garbage dumper bin",
+    "type": "garbage",
+    "status": "Reported",
+    "priority_score": 62,
+    "area": "Bicholi Mardana",
+    "address": "Bicholi Mardana Road, near bypass junction",
+    "ward": "Ward 78 - Bicholi Hills",
+    "report_count": 3,
+    "latitude": 22.7091,
+    "longitude": 75.9142,
+    "image_url": "/garbage.jpg",
+    "created_at": "2026-10-03T08:05:00.000Z",
+    "department": "Solid Waste Management",
+    "detections": [
+      {
+        "class": "garbage",
+        "confidence": 0.96,
+        "bbox": [0.25, 0.35, 0.52, 0.55],
+        "label": "Garbage Overflow · Level 3"
+      }
+    ],
+    "connected_hazards": [
+      {
+        "type": "residential_drain",
+        "distance_m": 25,
+        "risk_level": "Low"
+      }
+    ],
+    "complaints": [
+      {
+        "reference_number": "IMC-2026-11290",
+        "citizen_name": "Vikas Patidar",
+        "phone": "+91 98270 99432",
+        "created_at": "2026-10-03T08:05:00.000Z"
+      }
+    ],
+    "timeline": [
+      {
+        "status": "Reported",
+        "time": "2026-10-03T08:05:00.000Z",
+        "by": "Vikas Patidar",
+        "note": "Waste spill on pedestrian pathway."
+      }
+    ]
+  },
+  {
+    "id": "IS-0061",
+    "rawId": "IS-0061",
+    "title": "Broken footpath slab and exposed stormwater pit",
+    "type": "damaged_footpath",
+    "status": "Fixed",
+    "priority_score": 58,
+    "area": "New Palasia",
+    "address": "Sapna Sangeeta Road, near Tower Square",
+    "ward": "Ward 47 - Sapna Sangeeta",
+    "report_count": 4,
+    "latitude": 22.7018,
+    "longitude": 75.8711,
+    "image_url": "/footpath.jpg",
+    "created_at": "2026-09-26T17:30:00.000Z",
+    "department": "Civil Infrastructure Works",
+    "detections": [
+      {
+        "class": "damaged_footpath",
+        "confidence": 0.91,
+        "bbox": [0.2, 0.4, 0.6, 0.45],
+        "label": "Footpath Slab Fractured"
+      }
+    ],
+    "connected_hazards": [
+      {
+        "type": "senior_citizen_park",
+        "distance_m": 30,
+        "risk_level": "Medium"
+      }
+    ],
+    "complaints": [
+      {
+        "reference_number": "IMC-2026-11110",
+        "citizen_name": "Kavita Joshi",
+        "phone": "+91 98263 77410",
+        "created_at": "2026-09-26T17:30:00.000Z"
+      }
+    ],
+    "timeline": [
+      {
+        "status": "Reported",
+        "time": "2026-09-26T17:30:00.000Z",
+        "by": "Kavita Joshi",
+        "note": "Tripping hazard for pedestrians."
+      },
+      {
+        "status": "In Progress",
+        "time": "2026-09-27T11:00:00.000Z",
+        "by": "Zone 5 Masonry Unit",
+        "note": "Precast RCC slab replacement initiated."
+      },
+      {
+        "status": "Fixed",
+        "time": "2026-09-28T16:20:00.000Z",
+        "by": "Assistant Engineer (Civil)",
+        "note": "New reinforced pavers laid and certified."
+      }
+    ]
+  },
+  {
+    "id": "IS-0054",
+    "rawId": "IS-0054",
+    "title": "Severe waterlogging due to blocked stormwater drain",
+    "type": "overflowing_drain",
+    "status": "In Progress",
+    "priority_score": 85,
+    "area": "Geeta Bhavan",
+    "address": "Manorama Ganj, near Geeta Bhavan Square",
+    "ward": "Ward 39 - Geeta Bhavan",
+    "report_count": 8,
+    "latitude": 22.7155,
+    "longitude": 75.8821,
+    "image_url": "/pipeline.jpg",
+    "created_at": "2026-10-02T11:20:00.000Z",
+    "department": "Drainage & Sewerage Division",
+    "detections": [
+      {
+        "class": "overflowing_drain",
+        "confidence": 0.93,
+        "bbox": [0.15, 0.35, 0.7, 0.5],
+        "label": "Drainage Blockage · Road Inundation"
+      }
+    ],
+    "connected_hazards": [
+      {
+        "type": "substation",
+        "distance_m": 50,
+        "risk_level": "High"
+      }
+    ],
+    "complaints": [
+      {
+        "reference_number": "IMC-2026-11265",
+        "citizen_name": "Deepak Jain",
+        "phone": "+91 98260 22910",
+        "created_at": "2026-10-02T11:20:00.000Z"
+      }
+    ],
+    "timeline": [
+      {
+        "status": "Reported",
+        "time": "2026-10-02T11:20:00.000Z",
+        "by": "Deepak Jain",
+        "note": "Drain choking causing knee-deep water on street."
+      },
+      {
+        "status": "In Progress",
+        "time": "2026-10-02T14:10:00.000Z",
+        "by": "Suction Jetting Unit #2",
+        "note": "High-pressure desilting truck on site."
+      }
+    ]
+  },
+  {
+    "id": "IS-0048",
+    "rawId": "IS-0048",
+    "title": "Trench excavation left unbarricaded without warning sign",
+    "type": "pothole",
+    "status": "Reported",
+    "priority_score": 83,
+    "area": "Annapurna",
+    "address": "Annapurna Road, near Narendra Tiwari Marg",
+    "ward": "Ward 55 - Annapurna West",
+    "report_count": 6,
+    "latitude": 22.6985,
+    "longitude": 75.8344,
+    "image_url": "/pothole.jpg",
+    "created_at": "2026-10-04T10:45:00.000Z",
+    "department": "Roads & Highways Department",
+    "detections": [
+      {
+        "class": "pothole",
+        "confidence": 0.95,
+        "bbox": [0.25, 0.4, 0.55, 0.48],
+        "label": "Unprotected Trench Pit"
+      }
+    ],
+    "connected_hazards": [
+      {
+        "type": "school_bus_route",
+        "distance_m": 20,
+        "risk_level": "High"
+      }
+    ],
+    "complaints": [
+      {
+        "reference_number": "IMC-2026-11320",
+        "citizen_name": "Sunil Agrawal",
+        "phone": "+91 94250 88201",
+        "created_at": "2026-10-04T10:45:00.000Z"
+      }
+    ],
+    "timeline": [
+      {
+        "status": "Reported",
+        "time": "2026-10-04T10:45:00.000Z",
+        "by": "Citizen App",
+        "note": "Utility trench left open after cable laying."
+      }
+    ]
+  }
+]
